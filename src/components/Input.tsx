@@ -14,7 +14,7 @@ export const Input: FC<PropsWithChildren<InputPropsT>> = (props) => {
 			<label className="w-100 form-label">
 				<Paragraph variant="span" className="fw-medium">{label}</Paragraph>
 				
-				<input className={clsx(className, 'form-control')} {...restProps} autoComplete />
+				<input className={clsx(className, 'form-control')} {...restProps} />
 			</label>
 		</div>
 	)

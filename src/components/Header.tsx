@@ -12,7 +12,9 @@ export const Header: FC<PropsWithChildren<HeaderPropsT>> = (props) => {
 		<header className="w-100 mb-4">
 			<div className="d-flex justify-content-between">
 				{props.title && (
-					<Title variant="h3" className="m-4 fw-bold">{props.title}</Title>
+					<Link to={RoutePaths.Home}>
+						<Title variant="h3" className="m-4 fw-bold">{props.title}</Title>
+					</Link>
 				)}
 
 				<div className="d-flex align-items-center">
@@ -20,7 +22,7 @@ export const Header: FC<PropsWithChildren<HeaderPropsT>> = (props) => {
 						<Link to={RoutePaths.SingIn}>Sing in</Link>
 					</span>
 					<span className="p-3 fs-5 fw-medium text-white">
-						Sing up
+						<Link to={RoutePaths.SingUp}>Sing up</Link>
 					</span>
 				</div>
 			</div>

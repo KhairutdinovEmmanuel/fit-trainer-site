@@ -15,26 +15,20 @@ const SingInPage = () => {
 
 	return (
 		<PublicLayout>
-			<CardPage title="Sign In" subtitle="Please, enter yuor email and password">
+			<CardPage title="Sign Up" subtitle="Please, enter yuor email and password">
 				<form onSubmit={handleSubmit}>
 					<Input label="Email" type="email" placeholder="example@gmail.com" />
-
+					
 					<Input label="Password" type="password" placeholder="******" />
 
-					<div className="mb-3 form-check">
-						<label className="w-100 form-label">
-							<input type="checkbox" className="form-check-input" />
-
-							<Paragraph variant="span" className="fw-medium">Check me out</Paragraph>
-						</label>
-					</div>
+					<Input label="Repeat password" type="repeatPassword" placeholder="******" />
 
 					<div>
-						<button type="submit" className="btn btn-primary fw-bold text-uppercase">Sign in</button>
+						<button type="submit" className="btn btn-primary fw-bold text-uppercase">Sign up</button>
 					</div>
 
 					<Paragraph variant="span">
-						First time user? <Link to={RoutePaths.SingUp} className="text-decoration-underline">sing-up</Link>
+						Have account? <Link to={RoutePaths.SingIn} className="text-decoration-underline">sing-in</Link>
 					</Paragraph>
 				</form>
 			</CardPage>
