@@ -1,5 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import { Title } from "./Title.tsx";
+import { Link } from "react-router-dom";
+import { RoutePaths } from "../router/constants.ts";
 
 type HeaderPropsT = {
 	title?: string;
@@ -15,7 +17,7 @@ export const Header: FC<PropsWithChildren<HeaderPropsT>> = (props) => {
 
 				<div className="d-flex align-items-center">
 					<span className="p-3 fs-5 fw-medium text-white">
-						Sing in
+						<Link to={RoutePaths.SingIn}>Sing in</Link>
 					</span>
 					<span className="p-3 fs-5 fw-medium text-white">
 						Sing up

@@ -1,3 +1,4 @@
 export const enum RoutePaths {
-	Home = '/'
+	Home = '/',
+	SingIn = '/sign-in',
 }

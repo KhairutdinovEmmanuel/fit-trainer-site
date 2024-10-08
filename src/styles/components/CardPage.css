@@ -1,0 +1,16 @@
+.card-page {
+	min-width: 500px;
+	background: #323232;
+	border-radius: 10px;
+}
+
+.card-header-page {
+	background: #404040;
+	border-radius: 10px;
+	
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 16px;
+	
+	transform: translateY(-24px);
+}
