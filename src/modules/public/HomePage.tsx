@@ -1,34 +1,31 @@
-import { useState } from "react";
-import clsx from 'clsx';
-import reactLogo from "../../assets/react.svg";
-import viteLogo  from "../../assets/vite.svg";
-import styles from './HomePage.module.css';
+import { Header } from "../../components/Header.tsx";
+import { Title } from "../../components/Title.tsx";
+import { Button } from "../../components/Button.tsx";
+import { FitnessBanner } from "../../components/FitnessBanner.tsx";
 
 const HomePage = () => {
-	const [count, setCount] = useState(0)
-
 	return (
 		<>
-			<div>
-				<a href="https://vitejs.dev" target="_blank">
-					<img src={viteLogo} className={styles.logo} alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank">
-					<img src={reactLogo} className={clsx(styles.logo, styles.react)} alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className={styles.card}>
-				<button onClick={() => setCount((count) => count + 1)}>
-					count is {count}
-				</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className={styles.readTheDocs}>
-				Click on the Vite and React logos to learn more
-			</p>
+			<Header title="FIT TRAINER" />
+
+			<main className="d-flex justify-content-center p-4">
+				<div className="d-flex align-items-center">
+					<div>
+						<Title variant="h1" className="text-white">
+							Welcome to Fit Trainer
+						</Title>
+						<Title variant="h4" className="text-white">
+							Start training with our app
+						</Title>
+
+						<Button className="mt-3 btn-lg btn-primary">
+							Go <i className="bi bi-arrow-right ps-3 fs-4"></i>
+						</Button>
+					</div>
+				</div>
+
+				<FitnessBanner />
+			</main>
 		</>
 	)
 }
